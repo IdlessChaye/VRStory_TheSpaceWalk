@@ -29,7 +29,7 @@ namespace IdlessChaye.VRStory
 
 			PachiGrimoire.I.OnFinish = () => ModeManager.I.TransferTo(GameMode.World);
 
-			StartAVGEngine(ConstData.avgScriptName);
+			//StartAVGEngine(ConstData.avgScriptName);
 		}
 
 
@@ -55,8 +55,14 @@ namespace IdlessChaye.VRStory
 		private void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
 		{
 			string sceneName = scene.name;
-			if (sceneName.Equals(ConstData.scene01))
+			if (sceneName.Equals(ConstData.scene00))
 			{
+				ModeManager.I.TransferTo(GameMode.Idle);
+				Debug.Log("Current Scene: " + ConstData.scene00);
+			}
+			else if (sceneName.Equals(ConstData.scene01))
+			{
+				ModeManager.I.TransferTo(GameMode.World);
 				StartAVGEngine(ConstData.avgScriptName);
 			}
 			else if(sceneName.Equals(ConstData.scene02))

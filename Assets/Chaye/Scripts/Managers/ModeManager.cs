@@ -8,7 +8,8 @@ namespace IdlessChaye.VRStory
 	{
 		World,
 		AVG,
-		CutScene
+		CutScene,
+		Idle
 	}
 
 	public class ModeManager : BaseManager
@@ -22,7 +23,7 @@ namespace IdlessChaye.VRStory
 
 		public override void Init()
 		{
-			TransferTo(GameMode.World);
+			TransferTo(GameMode.Idle);
 		}
 
 		public void TransferTo(GameMode newMode)
@@ -32,18 +33,25 @@ namespace IdlessChaye.VRStory
 			switch (newMode)
 			{
 				case GameMode.World:
-					Cursor.lockState = CursorLockMode.Locked;
-					Cursor.visible = false;
+					SetCursor(CursorLockMode.Locked, false);
 					break;
 				case GameMode.AVG:
-					Cursor.lockState = CursorLockMode.Confined;
-					Cursor.visible = true;
+					SetCursor(CursorLockMode.Confined, true);
 					break;
 				case GameMode.CutScene:
-					Cursor.lockState = CursorLockMode.Confined;
-					Cursor.visible = true;
+					SetCursor(CursorLockMode.Confined, true);
+					break;
+				case GameMode.Idle:
+					SetCursor(CursorLockMode.Confined, true);
 					break;
 			}
 		}
+
+		public void SetCursor(CursorLockMode lockMode, bool isVisible)
+		{
+			Cursor.lockState = lockMode;
+			Cursor.visible = isVisible;
+		}
+
 	}
 }

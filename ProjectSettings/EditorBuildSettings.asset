@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Chaye/Scenes/00_Menu.unity
+    guid: 358a90cdf1fa9f94cbbc05d4d77dbfc5
+  - enabled: 1
     path: Assets/Chaye/Scenes/01_OuterSpace.unity
     guid: 0e8261565001df04892c0c4d57d2090f
   - enabled: 1
