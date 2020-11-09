@@ -197,6 +197,11 @@ namespace IdlessChaye.IdleToolkit.AVGEngine {
             stateMachine.TransferStateTo(IdleState.Instance);
         }
 
+		public bool IsIdle()
+		{
+			return stateMachine.CurrentState == IdleState.Instance;
+		}
+
         #endregion
 
 

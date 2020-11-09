@@ -19,17 +19,30 @@ namespace IdlessChaye.IdleToolkit.AVGEngine {
         private bool CanParse(string commandToken, ScriptSentenceContext context) {
             bool canParse = true;
 
-            if (commandToken.Equals("Engine")) {
-                node = new CommandEngineNode();
-            } else if (commandToken.Equals("Music")) {
-                node = new CommandMusicNode();
-            } else if (commandToken.Equals("Text")) {
-                node = new CommandTextNode();
-            } else if (commandToken.Equals("Image")) {
-                node = new CommandImageNode();
-            } else {
-                canParse = false;
-            }
+			if (commandToken.Equals("Engine"))
+			{
+				node = new CommandEngineNode();
+			}
+			else if (commandToken.Equals("Music"))
+			{
+				node = new CommandMusicNode();
+			}
+			else if (commandToken.Equals("Text"))
+			{
+				node = new CommandTextNode();
+			}
+			else if (commandToken.Equals("Image"))
+			{
+				node = new CommandImageNode();
+			}
+			else if (commandToken.Equals("Other"))
+			{
+				node = new CommandOtherNode();
+			}
+			else
+			{
+				canParse = false;
+			}
 
             if (canParse) {
                 //Debug.Log("CommandNode CanParse commandToken: " + commandToken);

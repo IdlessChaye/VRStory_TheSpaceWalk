@@ -1,5 +1,6 @@
 Engine_SystemDebugLog(<VRStory!!>)
 Engine_ChapterNameSet(01.回到空间站)
+Other_KnowledgeAdd(Test)
 TS(*DL_VRDialog_0*,我)TSEND
 TS(*DL_VRDialog_1*,我)TSEND
 TS(*DL_VRDialog_2*,我)TSEND

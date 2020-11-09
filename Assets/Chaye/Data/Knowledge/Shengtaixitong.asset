@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a83945eba530a409409d3a85c1ab17, type: 3}
+  m_Name: Shengtaixitong
+  m_EditorClassIdentifier: 
+  itemName: Test
+  itemDescribe: "\u600E\u4E48\u8BF4\uFF0C\u5148\u56DE\u5230\u7A7A\u95F4\u7AD9\u5427\uFF01
+    \u62D6\u52A8\u9F20\u6807\u4EE5\u73AF\u987E\u56DB\u5468 \u60F3\u4F53\u9A8C\u592A\u7A7A\u6F2B\u6B65\uFF1F\u6309\u4E0BWASDQE\uFF0C\u4F60\u4F1A\u542F\u52A8\u5B87\u822A\u670D\u4E2D\u88C5\u8F7D\u7684\u6C2E\u63A8\u529B\u5668\uFF0C\u8FDB\u884C6\u4E2A\u81EA\u7531\u5EA6\u7684\u98DE\u884C
+    \u5B66\u4F1A\u4E86\u4EE5\u4E0A\u4E24\u70B9\uFF0C\u4F60\u5C31\u662F\u591C\u7A7A\u4E2D\u6700\u9753\u7684\u4ED4
+    \u73B0\u5728\u5148\u627E\u5230\u7A7A\u95F4\u7AD9\u7684\u4F4D\u7F6E\uFF0C\u7136\u540E\u98DE\u5411\u5B83\u5427\uFF01"

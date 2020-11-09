@@ -11,6 +11,7 @@ namespace IdlessChaye.VRStory
 
 		public static KeyCode spaceUp = KeyCode.E;
 		public static KeyCode spaceDown = KeyCode.Q;
+		public static KeyCode ESC = KeyCode.Escape;
 
 		public static string scene00 = "00_Menu";
 		public static string scene01 = "01_OuterSpace";
