@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125b9f6e6906d6e4897a443b3c12729c, type: 3}
+  m_Name: AVGEngine_Config
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 17c0a5049177bd74b9736efa70950406, type: 2}
+  mSprites:
+  - name: Config_Logo
+    x: 0
+    y: 154
+    width: 321
+    height: 160
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 96
+    paddingRight: 95
+    paddingTop: 147
+    paddingBottom: 205
+  - name: Effect_Frag
+    x: 326
+    y: 18
+    width: 135
+    height: 67
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 61
+    paddingRight: 60
+    paddingTop: 86
+    paddingBottom: 103
+  - name: Etc_Frag
+    x: 449
+    y: 145
+    width: 70
+    height: 67
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 94
+    paddingRight: 92
+    paddingTop: 86
+    paddingBottom: 103
+  - name: Exit_Frag
+    x: 494
+    y: 293
+    width: 82
+    height: 67
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 88
+    paddingRight: 86
+    paddingTop: 86
+    paddingBottom: 103
+  - name: Exit_Frag_Hover
+    x: 403
+    y: 285
+    width: 90
+    height: 75
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 84
+    paddingRight: 82
+    paddingTop: 82
+    paddingBottom: 99
+  - name: Exit_Frag_Pressed
+    x: 446
+    y: 213
+    width: 86
+    height: 71
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 86
+    paddingRight: 84
+    paddingTop: 84
+    paddingBottom: 101
+  - name: frame
+    x: 322
+    y: 247
+    width: 80
+    height: 113
+    borderLeft: 34
+    borderRight: 38
+    borderTop: 55
+    borderBottom: 41
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Message_Frag
+    x: 0
+    y: 16
+    width: 175
+    height: 68
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 40
+    paddingRight: 41
+    paddingTop: 85
+    paddingBottom: 103
+  - name: note
+    x: 462
+    y: 81
+    width: 63
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 32
+    paddingRight: 33
+    paddingTop: 36
+    paddingBottom: 29
+  - name: note_play
+    x: 520
+    y: 149
+    width: 63
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 32
+    paddingRight: 33
+    paddingTop: 36
+    paddingBottom: 29
+  - name: Screen_Frag
+    x: 176
+    y: 17
+    width: 149
+    height: 67
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 54
+    paddingRight: 53
+    paddingTop: 86
+    paddingBottom: 103
+  - name: SetupDefault_Frag
+    x: 0
+    y: 85
+    width: 304
+    height: 68
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 105
+    paddingRight: 103
+    paddingTop: 237
+    paddingBottom: 207
+  - name: SetupDefault_Frag_Hover
+    x: 318
+    y: 436
+    width: 312
+    height: 76
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 101
+    paddingRight: 99
+    paddingTop: 233
+    paddingBottom: 203
+  - name: SetupDefault_Frag_Pressed
+    x: 318
+    y: 361
+    width: 310
+    height: 74
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 102
+    paddingRight: 100
+    paddingTop: 234
+    paddingBottom: 204
+  - name: Sound_Frag
+    x: 305
+    y: 86
+    width: 143
+    height: 67
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 57
+    paddingRight: 56
+    paddingTop: 86
+    paddingBottom: 103
+  - name: Voice_Frag
+    x: 322
+    y: 179
+    width: 123
+    height: 67
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 65
+    paddingRight: 68
+    paddingTop: 86
+    paddingBottom: 103
+  - name: Voice_Loge
+    x: 0
+    y: 315
+    width: 317
+    height: 197
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 87
+    paddingRight: 108
+    paddingTop: 153
+    paddingBottom: 162
+  - name: white
+    x: 533
+    y: 244
+    width: 56
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 36
+    paddingRight: 36
+    paddingTop: 42
+    paddingBottom: 38
+  mPixelSize: 1
+  mReplacement: {fileID: 0}

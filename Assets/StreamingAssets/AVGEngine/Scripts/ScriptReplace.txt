@@ -1,0 +1,31 @@
+// 测试注释功能，以下实现ifthenelse的二层嵌套功能
+// 注释只能在行首用//标记
+// 下边一行测试空行跳过功能
+
+Replace(<if > , <Engine_ScriptIfThenElse(>) 
+Replace(< then
+	>,<,>)
+Replace(<
+else
+	>,<,>)
+Replace(<
+endif>,<)
+>)
+Replace(< then
+		>,<,>)
+Replace(<
+	else
+		>,<,>)
+// 最后测试文件尾自动添加回车功能
+Replace(<
+	endif>,<)
+>)
+Replace(<ANI(>,<Engine_SystemChangeStateToAnimate(>)
+Replace(<WAIT(>,<Engine_SystemChangeStateToWait(>)
+Replace(<TS(>,<Text_Clear()
+Text_Change(>)
+Replace(<)TSEND>,<)
+ANI()
+WAIT()
+Engine_BacklogAdd()
+>)
