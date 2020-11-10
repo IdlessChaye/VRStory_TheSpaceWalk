@@ -58,7 +58,6 @@ namespace IdlessChaye.VRStory
 		public override void Init()
 		{
 			IsWorking = false;
-			Messenger.AddListener<string>(ConstData.invokeKnowledge, InvokeKnowledge);
 
 			foreach(var data in knowledgeDataArray)
 			{
@@ -66,23 +65,57 @@ namespace IdlessChaye.VRStory
 				var itemName = data.itemName;
 				if (itemName.Equals(ConstData.太空漫步))
 				{
-
+					canBeObtained = () =>
+					{
+						if (GameManager.I.IsScene(ConstData.scene01) == false)
+							return false;
+						var player = PlayerSpaceController.I;
+						if (player == null)
+							return false;
+						var stationPos = new Vector3(-100, 12.84f, -85);
+						float trigDisSqr = 2414;
+						var dis = Vector3.SqrMagnitude(stationPos - player.transform.position);
+						if (dis <= trigDisSqr)
+						{
+							return true;
+						}
+						return false;
+					};
 				}
 				else if (itemName.Equals(ConstData.地球))
 				{
-
+					canBeObtained = () =>
+					{
+						var player = PlayerSpaceController.I;
+						if (player == null)
+							return false;
+						var earthDir = -Vector3.forward;
+						var cosValue = Vector3.Dot(player.transform.forward.normalized, earthDir);
+						if (cosValue > 0.9f)
+							return true;
+						return false;
+					};
 				}
 				else if (itemName.Equals(ConstData.空间站))
 				{
-
+					canBeObtained = () =>
+					{
+						return Input.GetKeyDown(KeyCode.W) && GameManager.I.IsScene(ConstData.scene02);
+					};
 				}
 				else if (itemName.Equals(ConstData.生命保障系统))
 				{
-
+					canBeObtained = () =>
+					{
+						return PlayerData.I.ReadBookCount >= 1 && GameManager.I.IsScene(ConstData.scene02);
+					};
 				}
 				else if (itemName.Equals(ConstData.星际旅行))
 				{
-
+					canBeObtained = () =>
+					{
+						return PlayerData.I.ReadBookCount >= 4 && GameManager.I.IsScene(ConstData.scene02);
+					};
 				}
 
 				var piece = new KnowledgePiece
@@ -118,7 +151,7 @@ namespace IdlessChaye.VRStory
 					if (PachiGrimoire.I.IsIdle() == true && UIManager.I.CurrentAni == null && ModeManager.I.GameMode == GameMode.World)
 					{
 						IsWorking = true;
-						Messenger.Broadcast<string>(ConstData.invokeKnowledge, knowToBeRead.Dequeue().itemName);
+						InvokeKnowledge(knowToBeRead.Dequeue().itemName);
 					}
 				}
 			}

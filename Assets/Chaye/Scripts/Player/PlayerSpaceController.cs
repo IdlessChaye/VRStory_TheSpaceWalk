@@ -6,6 +6,9 @@ namespace IdlessChaye.VRStory
 {
 	public class PlayerSpaceController : MonoBehaviour
 	{
+		private static PlayerSpaceController _instance;
+		public static PlayerSpaceController I => _instance;
+
 		public float viewMoveSpeed = 600f;
 		public float posMoveSpeed = 10f;
 
@@ -16,6 +19,7 @@ namespace IdlessChaye.VRStory
 
 		private void Awake()
 		{
+			_instance = this;
 			_transform = this.transform;
 			_rigidbody = GetComponent<Rigidbody>();
 		}

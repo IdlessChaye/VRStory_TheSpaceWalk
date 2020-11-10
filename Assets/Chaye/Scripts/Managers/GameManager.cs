@@ -51,7 +51,8 @@ namespace IdlessChaye.VRStory
 
 			if (Input.GetKeyDown(ConstData.ESC))
 			{
-				if (SceneManager.GetActiveScene().name.Equals(ConstData.scene01))
+				if (IsScene(ConstData.scene01) 
+					|| IsScene(ConstData.scene02))
 				{
 					if (PachiGrimoire.I.IsIdle() == true && UIManager.I.CurrentAni == null)
 					{
@@ -117,6 +118,11 @@ namespace IdlessChaye.VRStory
 				ModeManager.I.TransferTo(GameMode.World);
 				StartAVGEngine(ConstData.avgScriptName02);
 			}
+		}
+
+		public bool IsScene(string sceneName)
+		{
+			return SceneManager.GetActiveScene().name.Equals(sceneName);
 		}
 
 		public void Quit()

@@ -1124,7 +1124,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Flare
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 12100000, guid: f781221647151f243862d40a1e158f97,
+        type: 2}
     - target: {fileID: 7546258470214730882, guid: 2ca73e4524d6ac844af0e32cc1688a02,
         type: 3}
       propertyPath: m_LocalPosition.x

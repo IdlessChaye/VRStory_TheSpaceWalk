@@ -12,6 +12,8 @@ namespace IdlessChaye.VRStory
 
 		public List<string> knowledgeList = new List<string>();
 
+		public uint ReadBookCount { get; set; }
+
 		public void AddKnowledge(string itemName)
 		{
 			if (string.IsNullOrEmpty(itemName))

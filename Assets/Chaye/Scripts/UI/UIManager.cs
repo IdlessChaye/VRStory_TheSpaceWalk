@@ -69,9 +69,9 @@ namespace IdlessChaye.VRStory
 			{
 				OpenPanel(menuAni);
 			}
-			else
+			else if (sceneName.Equals(ConstData.scene02))
 			{
-
+				OpenPanel(menuAni);
 			}
 		}
 
@@ -89,6 +89,9 @@ namespace IdlessChaye.VRStory
 					if (childButton == null)
 					{ 
 						var buttonGO = Instantiate(knowButton, leftContent, false);
+						buttonGO.name = knowData.itemName;
+						var buttonText = buttonGO.transform.GetComponentsInChildren<Text>();
+						buttonText[0].text = knowData.itemName;
 						var button = buttonGO.GetComponent<Button>();
 						button.onClick.RemoveAllListeners();
 						button.onClick.AddListener(() =>
@@ -96,6 +99,7 @@ namespace IdlessChaye.VRStory
 							rightHeader.text = knowData.itemName;
 							rightText.text = knowData.itemDescribe;
 						});
+						childButton = buttonGO.transform;
 					}
 
 					rightHeader.text = knowData.itemName;
@@ -110,6 +114,9 @@ namespace IdlessChaye.VRStory
 					if (childButton == null)
 					{
 						var buttonGO = Instantiate(knowButton, leftContent, false);
+						buttonGO.name = knowData.itemName;
+						var buttonText = buttonGO.transform.GetComponentsInChildren<Text>();
+						buttonText[0].text = knowData.itemName;
 						var button = buttonGO.GetComponent<Button>();
 						button.onClick.RemoveAllListeners();
 						button.onClick.AddListener(() =>

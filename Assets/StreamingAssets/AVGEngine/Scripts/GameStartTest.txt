@@ -1,6 +1,0 @@
-Engine_SystemDebugLog(<TEST!>)
-Engine_ChapterNameSet(02.又又是闲咸的一天)
-WAIT()
-TS(*DL_Dialog_46*,我)TSEND
-TS(*DL_Dialog_47*,我)TSEND
-WAIT()
