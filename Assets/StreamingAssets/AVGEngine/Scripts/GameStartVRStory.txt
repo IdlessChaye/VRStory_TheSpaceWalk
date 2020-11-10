@@ -5,7 +5,7 @@ TS(*DL_VRDialog_0*,我)TSEND
 TS(*DL_VRDialog_1*,我)TSEND
 TS(*DL_VRDialog_2*,我)TSEND
 TS(*DL_VRDialog_3*,我)TSEND
-Image_FigureImageAdd(Marisa,*FI_Marisa*,0,0,0.5,0.5)
+Image_FigureImageAdd(Marisa,*FI_Marisa*,0,0,0.01,0.01)
 WAIT()
 TS(*DL_VRDialog_4*,我)TSEND
 Image_FigureImageRemove(Marisa)

@@ -28,9 +28,16 @@ namespace IdlessChaye.VRStory
 
 		void Update()
 		{
-			float viewMouseX = Input.GetAxis("Mouse X") * viewMoveSpeed * Time.deltaTime;
-			float viewMouseY = -Input.GetAxis("Mouse Y") * viewMoveSpeed * Time.deltaTime;
-			_transform.Rotate(new Vector3(viewMouseY, viewMouseX, 0), Space.Self);
+			float vertical = Input.GetAxis("Vertical") * posMoveForce * Time.deltaTime;
+			float horizontal = Input.GetAxis("Horizontal") * posMoveForce * Time.deltaTime;
+			bool isUp = Input.GetKey(ConstData.spaceUp);
+			bool isDown = Input.GetKey(ConstData.spaceDown);
+			float upDown = 0f;
+			if (isUp && !isDown)
+				upDown = posMoveForce * Time.deltaTime;
+			else if (isDown && !isUp)
+				upDown = -posMoveForce * Time.deltaTime;
+			_rigidbody.AddRelativeForce(new Vector3(horizontal, upDown, vertical));
 
 			//float vertical = Input.GetAxis("Vertical") * posMoveSpeed * Time.deltaTime;
 			//float horizontal = Input.GetAxis("Horizontal") * posMoveSpeed * Time.deltaTime;
@@ -43,16 +50,12 @@ namespace IdlessChaye.VRStory
 			//	upDown = -posMoveSpeed * Time.deltaTime;
 			//_transform.Translate(new Vector3(horizontal, upDown, vertical), Space.Self);
 
-			float vertical = Input.GetAxis("Vertical") * posMoveForce * Time.deltaTime;
-			float horizontal = Input.GetAxis("Horizontal") * posMoveForce * Time.deltaTime;
-			bool isUp = Input.GetKey(ConstData.spaceUp);
-			bool isDown = Input.GetKey(ConstData.spaceDown);
-			float upDown = 0f;
-			if (isUp && !isDown)
-				upDown = posMoveForce * Time.deltaTime;
-			else if (isDown && !isUp)
-				upDown = -posMoveForce * Time.deltaTime;
-			_rigidbody.AddRelativeForce(new Vector3(horizontal, upDown, vertical));
+			if (ModeManager.I.GameMode != GameMode.World)
+				return;
+
+			float viewMouseX = Input.GetAxis("Mouse X") * viewMoveSpeed * Time.deltaTime;
+			float viewMouseY = -Input.GetAxis("Mouse Y") * viewMoveSpeed * Time.deltaTime;
+			_transform.Rotate(new Vector3(viewMouseY, viewMouseX, 0), Space.Self);
 		}
 	}
 }

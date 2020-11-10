@@ -14,6 +14,12 @@ namespace IdlessChaye.VRStory
 
 		private void Awake()
 		{
+			if (_instance != null)
+			{
+				DestroyImmediate(this.gameObject);
+				return;
+			}
+
 			_instance = this;
 			DontDestroyOnLoad(this.gameObject);
 		}
@@ -53,10 +59,12 @@ namespace IdlessChaye.VRStory
 					if (PachiGrimoire.I.IsIdle() == true && UIManager.I.CurrentAni == null)
 					{
 						UIManager.I.OpenPanel(UIManager.I.menuAni);
+						ModeManager.I.TransferTo(GameMode.AVG);
 					}
 					else
 					{
 						UIManager.I.ClosePanel();
+						ModeManager.I.TransferTo(GameMode.World);
 					}
 				}
 			}
@@ -70,7 +78,14 @@ namespace IdlessChaye.VRStory
 
 		public void NewGame()
 		{
+			UIManager.I.ClosePanel();
 			SceneManager.LoadScene(ConstData.scene01);
+		}
+
+		public void BackToMainMenu()
+		{
+			UIManager.I.ClosePanel();
+			SceneManager.LoadScene(ConstData.scene00);
 		}
 
 		private void InitLastPart()

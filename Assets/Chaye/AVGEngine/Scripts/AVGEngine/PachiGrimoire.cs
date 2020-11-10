@@ -26,16 +26,17 @@ namespace IdlessChaye.IdleToolkit.AVGEngine {
         }
 
         public void Awake() {
-            DontDestroyOnLoad(gameObject);
             if (instance == null) {
                 instance = this;
             } else {
                 if (instance != this) {
                     Debug.Log("????");
                     Destroy(gameObject);
+					return;
                 }
             }
 
+            DontDestroyOnLoad(gameObject);
             Initialize();
         }
         #endregion

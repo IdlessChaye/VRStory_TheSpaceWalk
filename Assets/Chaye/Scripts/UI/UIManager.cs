@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace IdlessChaye.VRStory
 {
@@ -21,6 +22,12 @@ namespace IdlessChaye.VRStory
 
 		private void Awake()
 		{
+			if (_instance != null)
+			{
+				DestroyImmediate(this.gameObject);
+				return;
+			}
+				
 			_instance = this;
 			DontDestroyOnLoad(this.gameObject);
 		}
@@ -37,7 +44,28 @@ namespace IdlessChaye.VRStory
 			_currentAni = null;
 		}
 
+		public void CloseMenuPanel()
+		{
+			ModeManager.I.TransferTo(GameMode.World);
+			ClosePanel();
+		}
 
+		public void NotesBackCallback()
+		{
+			var sceneName = SceneManager.GetActiveScene().name;
+			if (sceneName.Equals(ConstData.scene00))
+			{
+				OpenPanel(mainMenuAni);
+			}
+			else if (sceneName.Equals(ConstData.scene01))
+			{
+				OpenPanel(menuAni);
+			}
+			else
+			{
+
+			}
+		}
 
 	}
 }
