@@ -16,5 +16,18 @@ namespace IdlessChaye.VRStory
 		public static string scene00 = "00_Menu";
 		public static string scene01 = "01_OuterSpace";
 		public static string scene02 = "02_InTheHome";
+
+
+		#region Event
+		public static string invokeKnowledge = "InvokeKnowledge";
+		#endregion
+
+		#region Knowledge
+		public static string 地球 = "地球";
+		public static string 太空漫步 = "太空漫步";
+		public static string 星际旅行 = "星际旅行";
+		public static string 生命保障系统 = "生命保障系统";
+		public static string 空间站 = "空间站";
+		#endregion
 	}
 }

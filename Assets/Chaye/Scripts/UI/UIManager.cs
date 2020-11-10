@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace IdlessChaye.VRStory
 {
@@ -16,6 +18,11 @@ namespace IdlessChaye.VRStory
 		public Animator menuAni;
 		public Animator notesAni;
 		public PanelManager topPanelManager;
+
+		public GameObject knowButton;
+		public RectTransform leftContent;
+		public Text rightHeader;
+		public Text rightText;
 
 		public Animator CurrentAni => _currentAni;
 		private Animator _currentAni;
@@ -36,6 +43,7 @@ namespace IdlessChaye.VRStory
 		{
 			_currentAni = ani;
 			topPanelManager.OpenPanel(ani);
+			InitPanel(ani);
 		}
 
 		public void ClosePanel()
@@ -64,6 +72,53 @@ namespace IdlessChaye.VRStory
 			else
 			{
 
+			}
+		}
+
+		private void InitPanel(Animator ani)
+		{
+			if (ani == notesAni)
+			{
+				rightHeader.text = "";
+				rightText.text = "";
+				var knowList = PlayerData.I.knowledgeList;
+				if (knowList.Count != 0)
+				{
+					var knowData = KnowledgeManager.I.GetKnowledgeData(knowList[0]);
+					var childButton = leftContent.Find(knowData.itemName);
+					if (childButton == null)
+					{ 
+						var buttonGO = Instantiate(knowButton, leftContent, false);
+						var button = buttonGO.GetComponent<Button>();
+						button.onClick.RemoveAllListeners();
+						button.onClick.AddListener(() =>
+						{
+							rightHeader.text = knowData.itemName;
+							rightText.text = knowData.itemDescribe;
+						});
+					}
+
+					rightHeader.text = knowData.itemName;
+					rightText.text = knowData.itemDescribe;
+					EventSystem.current.SetSelectedGameObject(childButton.gameObject);
+				}
+
+				for(int i = 1; i < knowList.Count; i++)
+				{
+					var knowData = KnowledgeManager.I.GetKnowledgeData(knowList[i]);
+					var childButton = leftContent.Find(knowData.itemName);
+					if (childButton == null)
+					{
+						var buttonGO = Instantiate(knowButton, leftContent, false);
+						var button = buttonGO.GetComponent<Button>();
+						button.onClick.RemoveAllListeners();
+						button.onClick.AddListener(() =>
+						{
+							rightHeader.text = knowData.itemName;
+							rightText.text = knowData.itemDescribe;
+						});
+					}
+				}
 			}
 		}
 

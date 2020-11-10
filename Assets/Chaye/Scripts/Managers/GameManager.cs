@@ -30,14 +30,11 @@ namespace IdlessChaye.VRStory
 		private void Start()
 		{
 			SceneManager.sceneLoaded += OnSceneLoaded;
-
 			PlayerData.I.Init();
 			ModeManager.I.Init();
-			KnowledgeManager.I.Init();
-
 			PachiGrimoire.I.OnFinish = () => ModeManager.I.TransferTo(GameMode.World);
 			KnowledgeManager.I.knowledgeDataArray = this.knowledgeDataArray;
-
+			KnowledgeManager.I.Init();
 
 			InitLastPart();
 		}
@@ -68,6 +65,14 @@ namespace IdlessChaye.VRStory
 					}
 				}
 			}
+
+
+			#region Tick
+
+			float deltaTime = Time.deltaTime;
+			KnowledgeManager.I.Tick(deltaTime);
+
+			#endregion
 		}
 
 		public void StartAVGEngine(string storyFileName)

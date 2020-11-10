@@ -20,7 +20,7 @@ namespace IdlessChaye.IdleToolkit.AVGEngine
 			if (paraList.Count != 1)
 				throw new System.Exception("OtherKnowledgeAddNode");
 
-			KnowledgeManager.I.AchieveKnowledge(paraList[0]);
+			KnowledgeManager.I.AddKnowledge(paraList[0]);
 		}
 
 

@@ -14,6 +14,9 @@ namespace IdlessChaye.VRStory
 
 		public void AddKnowledge(string itemName)
 		{
+			if (string.IsNullOrEmpty(itemName))
+				return;
+
 			if (knowledgeList.Contains(itemName) == false)
 			{
 				knowledgeList.Add(itemName);
