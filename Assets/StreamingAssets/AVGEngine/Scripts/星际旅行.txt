@@ -2,11 +2,11 @@ Engine_SystemDebugLog(星际旅行！)
 Engine_ChapterNameSet(02.太空站)
 Image_FigureImageAdd(lvxing,*FI_lvxing*,0,100,1,1)
 WAIT()
-TS(*DL_lvxingDialog_0*,我)TSEND
-TS(*DL_lvxingDialog_1*,我)TSEND
-TS(*DL_lvxingDialog_2*,我)TSEND
-TS(*DL_lvxingDialog_3*,我)TSEND
-TS(*DL_lvxingDialog_4*,我)TSEND
+TS(*DL_lvxingDialog_0*,知识点-星际旅行)TSEND
+TS(*DL_lvxingDialog_1*,知识点-星际旅行)TSEND
+TS(*DL_lvxingDialog_2*,知识点-星际旅行)TSEND
+TS(*DL_lvxingDialog_3*,知识点-星际旅行)TSEND
+TS(*DL_lvxingDialog_4*,知识点-星际旅行)TSEND
 Image_FigureImageRemove(lvxing)
 WAIT()
 Other_KnowledgeAdd(星际旅行)

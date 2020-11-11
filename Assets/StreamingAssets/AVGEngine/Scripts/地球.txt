@@ -2,11 +2,11 @@ Engine_SystemDebugLog(地球！)
 Engine_ChapterNameSet(01.太空漫步)
 Image_FigureImageAdd(diqiu,*FI_diqiu*,0,100,1,1)
 WAIT()
-TS(*DL_diqiuDialog_0*,我)TSEND
-TS(*DL_diqiuDialog_1*,我)TSEND
-TS(*DL_diqiuDialog_2*,我)TSEND
-TS(*DL_diqiuDialog_3*,我)TSEND
-TS(*DL_diqiuDialog_4*,我)TSEND
+TS(*DL_diqiuDialog_0*,知识点-地球)TSEND
+TS(*DL_diqiuDialog_1*,知识点-地球)TSEND
+TS(*DL_diqiuDialog_2*,知识点-地球)TSEND
+TS(*DL_diqiuDialog_3*,知识点-地球)TSEND
+TS(*DL_diqiuDialog_4*,知识点-地球)TSEND
 Image_FigureImageRemove(diqiu)
 WAIT()
 Other_KnowledgeAdd(地球)
