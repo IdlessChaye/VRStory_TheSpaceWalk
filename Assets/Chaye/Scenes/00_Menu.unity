@@ -726,41 +726,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2512289832088584470, guid: 005c796c810605f47a533a7c1d802db1,
-        type: 3}
-      propertyPath: knowledgeDataArray.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512289832088584470, guid: 005c796c810605f47a533a7c1d802db1,
-        type: 3}
-      propertyPath: knowledgeDataArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6bd83c0f761416d4494fef331a99799e,
-        type: 2}
-    - target: {fileID: 2512289832088584470, guid: 005c796c810605f47a533a7c1d802db1,
-        type: 3}
-      propertyPath: knowledgeDataArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 44994849663377b40afc6a583c9f8651,
-        type: 2}
-    - target: {fileID: 2512289832088584470, guid: 005c796c810605f47a533a7c1d802db1,
-        type: 3}
-      propertyPath: knowledgeDataArray.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: d704844a2015864469e2b11f2a2cdcf6,
-        type: 2}
-    - target: {fileID: 2512289832088584470, guid: 005c796c810605f47a533a7c1d802db1,
-        type: 3}
-      propertyPath: knowledgeDataArray.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: acaa4486f65fe6c44a4116a63ac7f649,
-        type: 2}
-    - target: {fileID: 2512289832088584470, guid: 005c796c810605f47a533a7c1d802db1,
-        type: 3}
-      propertyPath: knowledgeDataArray.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 560746b1c6fbb6a4c885556e8de14cf4,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 005c796c810605f47a533a7c1d802db1, type: 3}
 --- !u!1001 &1692936878

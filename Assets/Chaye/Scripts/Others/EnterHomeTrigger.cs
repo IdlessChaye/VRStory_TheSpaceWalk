@@ -12,7 +12,7 @@ namespace IdlessChaye.VRStory
 			if(other.GetComponent<PlayerSpaceController>() != null)
 			{
 				Debug.Log("Enter Spaceship...");
-				SceneManager.LoadScene(ConstData.scene02);
+				GameManager.I.LoadScene(ConstData.scene02);
 			}
 		}
 	}

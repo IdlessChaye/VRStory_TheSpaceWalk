@@ -103,6 +103,7 @@ namespace IdlessChaye.VRStory
 		private void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
 		{
 			string sceneName = scene.name;
+
 			UIManager.I.ClosePanel();
 			if (sceneName.Equals(ConstData.scene00))
 			{
@@ -118,11 +119,33 @@ namespace IdlessChaye.VRStory
 				ModeManager.I.TransferTo(GameMode.World);
 				StartAVGEngine(ConstData.avgScriptName02);
 			}
+
+			MusicManager.I.SetBGMOnSceneLoaded(sceneName);
 		}
 
 		public bool IsScene(string sceneName)
 		{
 			return SceneManager.GetActiveScene().name.Equals(sceneName);
+		}
+
+		public void LoadScene(string sceneName)
+		{
+			if (PachiGrimoire.I.IsIdle() && ModeManager.I.GameMode == GameMode.World)
+				SceneManager.LoadScene(sceneName);
+			else
+				StartCoroutine(WaitForLoadScene(sceneName));
+		}
+
+		
+		private WaitForSeconds _waitForOneSecond = new WaitForSeconds(2);
+		IEnumerator WaitForLoadScene(string sceneName)
+		{
+			while(true)
+			{
+				yield return _waitForOneSecond;
+				if (PachiGrimoire.I.IsIdle() && ModeManager.I.GameMode == GameMode.World)
+					SceneManager.LoadScene(sceneName);
+			}
 		}
 
 		public void Quit()

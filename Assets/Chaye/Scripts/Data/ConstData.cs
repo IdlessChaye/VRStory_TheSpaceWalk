@@ -24,5 +24,11 @@ namespace IdlessChaye.VRStory
 		public static string 生命保障系统 = "生命保障系统";
 		public static string 空间站 = "空间站";
 		#endregion
+
+		#region bgmName
+		public static string scene00BGM = "上海アリス幻樂団 - 衛星カフェテラス";
+		public static string scene01BGM = "上海アリス幻樂団 - 向こう側の月";
+		public static string scene02BGM = "凋叶棕 - 待宵反射衛星カフェテラスで優雅なひとときを。";
+		#endregion
 	}
 }
