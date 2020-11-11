@@ -12,7 +12,6 @@ TS(*DL_VRDialog_8*,我)TSEND
 Image_FigureImageAdd(kongjianzhan2,*FI_kongjianzhan2*,0,100,1,1)
 WAIT()
 TS(*DL_VRDialog_9*,我)TSEND
-TS(*DL_VRDialog_10*,我)TSEND
 Image_FigureImageRemove(kongjianzhan2)
 WAIT()
-WAIT()
+TS(*DL_VRDialog_10*,我)TSEND

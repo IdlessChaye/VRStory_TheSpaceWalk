@@ -16,6 +16,12 @@ namespace IdlessChaye.VRStory
 
 		private void Awake()
 		{
+			if (_instance != null)
+			{ 
+				DestroyImmediate(this.gameObject);
+				return;
+			}
+
 			_instance = this;
 
 			bgmSource.loop = true;

@@ -109,7 +109,7 @@ namespace IdlessChaye.VRStory
 						{
 							_moveDis += 1f;
 						}
-						return _moveDis > 600f;
+						return _moveDis > 1000f;
 					};
 				}
 				else if (itemName.Equals(ConstData.生命保障系统))
@@ -127,7 +127,7 @@ namespace IdlessChaye.VRStory
 					{
 						if (GameManager.I.IsScene(ConstData.scene02) == false)
 							return false;
-						return PlayerData.I.ReadBookCount >= 4 && Time.time - _scene02startTime > 10f;
+						return PlayerData.I.ReadBookCount >= 4 && Time.time - _scene02startTime > 20f;
 						;
 					};
 				}
