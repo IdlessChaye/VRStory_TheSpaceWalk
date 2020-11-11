@@ -2086,6 +2086,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7286201114694431834}
     m_Modifications:
+    - target: {fileID: 803997895925089505, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u8FD4\u56DE\u8D77\u59CB\u754C\u9762"
+      objectReference: {fileID: 0}
     - target: {fileID: 803997895925089511, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2110,6 +2115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 803997896657654259, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u5173\u95ED"
       objectReference: {fileID: 0}
     - target: {fileID: 803997896657654261, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
         type: 3}
@@ -2146,6 +2156,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 803997896742900631, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u9000\u51FA\u6E38\u620F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 803997897049878038, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u83DC\u5355"
+      objectReference: {fileID: 0}
     - target: {fileID: 803997897574875768, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2180,6 +2200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 803997897574875774, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u67E5\u770B\u7B14\u8BB0"
       objectReference: {fileID: 0}
     - target: {fileID: 803997897580561667, guid: e51be34ffc5eddd4fa5d5c05417ae7c6,
         type: 3}
@@ -2341,6 +2366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008097958642832302, guid: ad3e802512bf40a47a62c1a998d01e24,
+        type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 1008097958642832303, guid: ad3e802512bf40a47a62c1a998d01e24,
         type: 3}
@@ -4273,6 +4303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7286201114447497607}
     m_Modifications:
+    - target: {fileID: 11400004, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
+      propertyPath: m_Text
+      value: "\u592A\u7A7A\u79D1\u666E(VR)"
+      objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4475,7 +4509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_Text
-      value: New Game
+      value: "\u65B0\u6E38\u620F"
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4594,7 +4628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_Text
-      value: Notes
+      value: "\u67E5\u770B\u7B14\u8BB0"
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4701,7 +4735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_Text
-      value: Settings
+      value: "\u8BBE\u7F6E"
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4836,7 +4870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_Text
-      value: Quit
+      value: "\u9000\u51FA\u6E38\u620F"
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 05a81c3d5091440058129444d28322f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

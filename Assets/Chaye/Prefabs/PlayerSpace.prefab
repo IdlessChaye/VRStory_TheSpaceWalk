@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewMoveSpeed: 600
   posMoveSpeed: 10
-  posMoveForce: 400
+  posMoveForce: 800
 --- !u!54 &1632318584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5609726952629315036}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0.25
   m_AngularDrag: 0.3
   m_UseGravity: 0
