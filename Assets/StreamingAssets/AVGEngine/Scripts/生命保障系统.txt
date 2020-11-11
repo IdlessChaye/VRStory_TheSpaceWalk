@@ -1,4 +1,10 @@
 Engine_SystemDebugLog(生命保障系统！)
-Engine_ChapterNameSet(01.太空漫步)
-TS(*DL_VRDialog_14*,我)TSEND
+Engine_ChapterNameSet(02.太空站)
+Image_FigureImageAdd(shengming,*FI_shengming*,0,100,0.6,0.6)
+WAIT()
+TS(*DL_xitongDialog_0*,我)TSEND
+TS(*DL_xitongDialog_1*,我)TSEND
+TS(*DL_xitongDialog_2*,我)TSEND
+Image_FigureImageRemove(shengming)
+WAIT()
 Other_KnowledgeAdd(生命保障系统)

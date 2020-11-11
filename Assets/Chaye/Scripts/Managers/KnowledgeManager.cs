@@ -20,6 +20,9 @@ namespace IdlessChaye.VRStory
 		private List<KnowledgePiece> knowPieceRemainList = new List<KnowledgePiece>();
 		private Queue<KnowledgeData> knowToBeRead = new Queue<KnowledgeData>();
 
+		private float _moveDis = -1000000f;
+		private float _scene02startTime = 1000000f;
+
 
 		public void AddKnowledge(string itemName)
 		{
@@ -100,21 +103,32 @@ namespace IdlessChaye.VRStory
 				{
 					canBeObtained = () =>
 					{
-						return Input.GetKeyDown(KeyCode.W) && GameManager.I.IsScene(ConstData.scene02);
+						if (GameManager.I.IsScene(ConstData.scene02) == false)
+							return false;
+						if (Input.GetKey(KeyCode.W))
+						{
+							_moveDis += 1f;
+						}
+						return _moveDis > 600f;
 					};
 				}
 				else if (itemName.Equals(ConstData.生命保障系统))
 				{
 					canBeObtained = () =>
 					{
-						return PlayerData.I.ReadBookCount >= 1 && GameManager.I.IsScene(ConstData.scene02);
+						if (GameManager.I.IsScene(ConstData.scene02) == false)
+							return false;
+						return PlayerData.I.ReadBookCount >= 1;
 					};
 				}
 				else if (itemName.Equals(ConstData.星际旅行))
 				{
 					canBeObtained = () =>
 					{
-						return PlayerData.I.ReadBookCount >= 4 && GameManager.I.IsScene(ConstData.scene02);
+						if (GameManager.I.IsScene(ConstData.scene02) == false)
+							return false;
+						return PlayerData.I.ReadBookCount >= 4 && Time.time - _scene02startTime > 10f;
+						;
 					};
 				}
 
@@ -175,6 +189,15 @@ namespace IdlessChaye.VRStory
 		private void FinishKnowledge()
 		{
 			IsWorking = false;
+		}
+
+		public void OnSceneLoaded(string sceneName)
+		{
+			if (GameManager.I.IsScene(ConstData.scene02))
+			{
+				_moveDis = 0f;
+				_scene02startTime = Time.time;
+			}
 		}
 	}
 }

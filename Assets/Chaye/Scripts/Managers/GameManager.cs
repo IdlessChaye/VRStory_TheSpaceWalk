@@ -121,6 +121,7 @@ namespace IdlessChaye.VRStory
 			}
 
 			MusicManager.I.SetBGMOnSceneLoaded(sceneName);
+			KnowledgeManager.I.OnSceneLoaded(sceneName);
 		}
 
 		public bool IsScene(string sceneName)

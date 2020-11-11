@@ -1,4 +1,14 @@
 Engine_SystemDebugLog(太空漫步！)
 Engine_ChapterNameSet(01.太空漫步)
-TS(*DL_VRDialog_12*,我)TSEND
+Image_FigureImageAdd(manbu2,*FI_manbu2*,0,100,1,1)
+WAIT()
+TS(*DL_manbuDialog_0*,我)TSEND
+TS(*DL_manbuDialog_1*,我)TSEND
+Image_FigureImageRemove(manbu2)
+Image_FigureImageAdd(manbu,*FI_manbu*,0,100,1,1)
+WAIT()
+TS(*DL_manbuDialog_2*,我)TSEND
+TS(*DL_manbuDialog_3*,我)TSEND
+Image_FigureImageRemove(manbu)
+WAIT()
 Other_KnowledgeAdd(太空漫步)

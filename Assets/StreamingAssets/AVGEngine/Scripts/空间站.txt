@@ -1,4 +1,11 @@
 Engine_SystemDebugLog(空间站！)
-Engine_ChapterNameSet(01.太空漫步)
-TS(*DL_VRDialog_15*,我)TSEND
+Engine_ChapterNameSet(02.太空站)
+Image_FigureImageAdd(kongjianzhan,*FI_kongjianzhan*,0,100,1,1)
+WAIT()
+TS(*DL_zhanDialog_0*,我)TSEND
+TS(*DL_zhanDialog_1*,我)TSEND
+TS(*DL_zhanDialog_2*,我)TSEND
+TS(*DL_zhanDialog_3*,我)TSEND
+Image_FigureImageRemove(kongjianzhan)
+WAIT()
 Other_KnowledgeAdd(空间站)

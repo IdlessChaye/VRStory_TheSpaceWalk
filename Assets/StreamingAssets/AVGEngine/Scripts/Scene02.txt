@@ -4,3 +4,4 @@ TS(*DL_VRDialog02_0*,我)TSEND
 TS(*DL_VRDialog02_1*,我)TSEND
 TS(*DL_VRDialog02_2*,我)TSEND
 TS(*DL_VRDialog02_3*,我)TSEND
+TS(*DL_VRDialog02_4*,我)TSEND
